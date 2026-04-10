@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil | Egitim Portali</title>
+    <meta
+      name="description"
+      content="Kullanici profil bilgilerini guncelleyin."
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a href="./dashboard.html" class="brand">
+          <span class="brand-mark">EP</span>
+          <span>
+            <strong>Egitim Portali</strong>
+            <small>Profil Ayarlari</small>
+          </span>
+        </a>
+
+        <nav class="topbar-actions">
+          <a href="./dashboard.html" class="btn btn-secondary">Panele Don</a>
+          <button id="logout-button" class="btn btn-ghost" type="button">
+            Cikis Yap
+          </button>
+        </nav>
+      </header>
+
+      <main class="page narrow">
+        <section class="panel-card profile-card">
+          <div class="panel-header">
+            <span class="eyebrow">Profil Bilgileri</span>
+            <h1>Kullanici adinizi tamamlayin</h1>
+            <p>
+              Quiz baglantilarinda kullanici adiniz kullanilir. Bu nedenle bu
+              alan zorunludur.
+            </p>
+          </div>
+
+          <form id="profile-form" class="stack-md">
+            <label class="field">
+              <span>E-posta</span>
+              <input id="profile-email" type="email" disabled />
+            </label>
+
+            <label class="field">
+              <span>Kullanici Adi</span>
+              <input
+                id="username"
+                name="username"
+                type="text"
+                minlength="3"
+                maxlength="40"
+                placeholder="ornek_kullanici"
+                required
+              />
+            </label>
+
+            <button type="submit" class="btn btn-primary">
+              Profili Kaydet
+            </button>
+          </form>
+
+          <div id="profile-message" class="message" aria-live="polite"></div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./assets/js/profile.js"></script>
+  </body>
+</html>

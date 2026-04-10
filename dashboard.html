@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel | Egitim Portali</title>
+    <meta
+      name="description"
+      content="Haftalik egitim videolari ve ilerleme paneli."
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a href="./dashboard.html" class="brand">
+          <span class="brand-mark">EP</span>
+          <span>
+            <strong>Egitim Portali</strong>
+            <small>Haftalik Video Programi</small>
+          </span>
+        </a>
+
+        <nav class="topbar-actions">
+          <a href="./profile.html" class="btn btn-secondary">Profil</a>
+          <button id="logout-button" class="btn btn-ghost" type="button">
+            Cikis Yap
+          </button>
+        </nav>
+      </header>
+
+      <main class="page">
+        <section class="page-hero">
+          <div>
+            <span class="eyebrow">Hos geldiniz</span>
+            <h1 id="dashboard-greeting">Programiniz yukleniyor</h1>
+            <p id="dashboard-subtitle">
+              Videolari sirasiyla tamamlayarak tum egitim planini bitirebilirsiniz.
+            </p>
+          </div>
+          <div class="hero-panel compact">
+            <span class="eyebrow">Genel Ilerleme</span>
+            <div class="progress-head">
+              <strong id="progress-count">0/12 tamamlandi</strong>
+              <span id="progress-percent">%0</span>
+            </div>
+            <div class="progress-bar">
+              <span id="progress-fill"></span>
+            </div>
+            <p id="next-unlock-text">Ilk video ile baslayabilirsiniz.</p>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Egitim Takvimi</span>
+              <h2>12 haftalik video listesi</h2>
+            </div>
+          </div>
+
+          <div id="dashboard-message" class="message" aria-live="polite"></div>
+          <div id="video-grid" class="video-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./assets/js/dashboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Detayi | Egitim Portali</title>
+    <meta
+      name="description"
+      content="Video izleme ve quiz tamamlama sayfasi."
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a href="./dashboard.html" class="brand">
+          <span class="brand-mark">EP</span>
+          <span>
+            <strong>Egitim Portali</strong>
+            <small>Video Detayi</small>
+          </span>
+        </a>
+
+        <nav class="topbar-actions">
+          <a href="./dashboard.html" class="btn btn-secondary">Panele Don</a>
+          <button id="logout-button" class="btn btn-ghost" type="button">
+            Cikis Yap
+          </button>
+        </nav>
+      </header>
+
+      <main class="page">
+        <div id="video-message" class="message" aria-live="polite"></div>
+
+        <section class="video-layout">
+          <article class="video-panel">
+            <span class="eyebrow" id="video-week-label">Hafta bilgisi</span>
+            <h1 id="video-title">Video yukleniyor</h1>
+            <p id="video-description">
+              Lutfen bekleyin, video detaylari getiriliyor.
+            </p>
+
+            <div class="video-frame" id="video-container">
+              <div class="loader"></div>
+            </div>
+
+            <div class="action-row">
+              <button
+                id="complete-button"
+                class="btn btn-secondary"
+                type="button"
+              >
+                Videoyu Tamamladim
+              </button>
+              <a id="quiz-button" class="btn btn-primary hidden" href="#" target="_blank" rel="noopener noreferrer">
+                Quizi Ac
+              </a>
+            </div>
+
+            <p class="muted">
+              Not: Bazi harici video kaynaklarinda izleme bitis olayi
+              algilanamayabilir. Bu durumda "Videoyu Tamamladim" butonu
+              yedek akistir.
+            </p>
+          </article>
+
+          <aside class="side-panel">
+            <div class="side-card">
+              <span class="eyebrow">Durum</span>
+              <h2>Bu haftadaki ilerlemeniz</h2>
+              <p id="status-text">Durum hesaplaniyor.</p>
+            </div>
+            <div class="side-card">
+              <span class="eyebrow">Quiz</span>
+              <h2>Video bitince aktif olur</h2>
+              <p>
+                Google Form baglantisi, kullanici adi ve video bilgileri ile
+                otomatik olusturulur.
+              </p>
+            </div>
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./assets/js/video.js"></script>
+  </body>
+</html>

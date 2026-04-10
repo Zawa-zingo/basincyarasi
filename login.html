@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giris Yap | Egitim Portali</title>
+    <meta
+      name="description"
+      content="Video egitim portalina giris yapin."
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body class="auth-layout">
+    <main class="auth-shell">
+      <section class="hero-panel">
+        <span class="eyebrow">Video Egitim Programi</span>
+        <h1>Her hafta yeni egitim, tek panelden takip</h1>
+        <p>
+          Giris yaptiktan sonra haftalik videolari izleyebilir, quizleri
+          tamamlayabilir ve ilerlemenizi kaydedebilirsiniz.
+        </p>
+        <div class="hero-stats">
+          <article>
+            <strong>12</strong>
+            <span>Toplam hafta</span>
+          </article>
+          <article>
+            <strong>2</strong>
+            <span>Haftalik yeni video</span>
+          </article>
+          <article>
+            <strong>%100</strong>
+            <span>Mobil uyumlu</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="auth-panel">
+        <div class="panel-card">
+          <div class="panel-header">
+            <span class="eyebrow">Hesap Girisi</span>
+            <h2>Portala hos geldiniz</h2>
+            <p>E-posta ve sifreniz ile giris yapin.</p>
+          </div>
+
+          <form id="login-form" class="stack-md">
+            <label class="field">
+              <span>E-posta</span>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="ornek@site.com"
+                autocomplete="email"
+                required
+              />
+            </label>
+
+            <label class="field">
+              <span>Sifre</span>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Sifrenizi girin"
+                autocomplete="current-password"
+                required
+              />
+            </label>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              Giris Yap
+            </button>
+          </form>
+
+          <div id="login-message" class="message" aria-live="polite"></div>
+
+          <div class="hint-box">
+            <strong>Not:</strong>
+            Hesaplar Firebase Authentication uzerinden yonetilir. Ilk giris
+            sonrasi kullanici adi eksikse profil tamamlama sayfasi acilir.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./assets/js/login.js"></script>
+  </body>
+</html>
