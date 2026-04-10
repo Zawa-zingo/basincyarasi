@@ -1,10 +1,10 @@
 export const firebaseConfig = {
-  apiKey: "FIREBASE_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyCySivNxQfpJ1DepngnPDQgLv7L-y-YJ4w",
+  authDomain: "basincyarasi-70df6.firebaseapp.com",
+  projectId: "basincyarasi-70df6",
+  storageBucket: "basincyarasi-70df6.firebasestorage.app",
+  messagingSenderId: "966240368159",
+  appId: "1:966240368159:web:c3c652c475a9904882872a"
 };
 
 export const appSettings = {
