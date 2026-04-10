@@ -9,6 +9,29 @@ import { setMessage, redirectTo } from "./utils.js";
 const form = document.getElementById("login-form");
 const messageBox = document.getElementById("login-message");
 
+function getAuthErrorMessage(error) {
+  const code = error?.code ?? "";
+
+  switch (code) {
+    case "auth/invalid-credential":
+      return "Giris basarisiz. E-posta veya sifre hatali gorunuyor.";
+    case "auth/invalid-email":
+      return "E-posta adresi gecersiz formatta.";
+    case "auth/user-disabled":
+      return "Bu kullanici hesabi devre disi birakilmis.";
+    case "auth/network-request-failed":
+      return "Ag baglantisi kurulamadigi icin giris yapilamadi.";
+    case "auth/too-many-requests":
+      return "Cok fazla deneme yapildi. Biraz bekleyip tekrar deneyin.";
+    case "auth/operation-not-allowed":
+      return "Firebase tarafinda Email/Password giris yontemi henuz etkin degil.";
+    case "auth/unauthorized-domain":
+      return `Bu alan adi yetkili degil: ${window.location.hostname}`;
+    default:
+      return `Giris basarisiz. Firebase hata kodu: ${code || "bilinmiyor"}`;
+  }
+}
+
 await requireGuest();
 
 form.addEventListener("submit", async (event) => {
@@ -26,9 +49,10 @@ form.addEventListener("submit", async (event) => {
     const profile = await ensureUserProfile(credential.user);
     redirectTo(profile.username ? "./dashboard.html" : "./profile.html");
   } catch (error) {
+    console.error("Firebase giris hatasi:", error);
     setMessage(
       messageBox,
-      "Giris basarisiz. E-posta ve sifrenizi kontrol edip tekrar deneyin.",
+      getAuthErrorMessage(error),
       "error"
     );
   } finally {
